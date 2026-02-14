@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teamoteamo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animación de entrada con blur -->
+    <div class="entry-animation"></div>
+
+    <!-- Contenedor de corazones flotantes -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Pantalla inicial -->
+    <div class="welcome-screen" id="welcomeScreen">
+        <h1 class="main-title">Para mi vida entera</h1>
+        <p class="subtitle">14 de Febrero, 2026</p>
+        <p class="subtitle-extra">1 año, 1 mes juntos <3</p>
+        <button class="start-button" id="startButton">Mira picale aqui</button>
+    </div>
+
+    <!-- Sección de línea de tiempo -->
+    <div class="timeline-section" id="timelineSection">
+        <h2 class="timeline-title">Una linea d tiempo del año q llevamos juntos</h2>
+        <p class="timeline-subtitle">14 de Enero 2025 - 14 de Febrero 2026</p>
+        <p class="timeline-subtitle">Picale a una fecha y saldran imagenes, picale a las imagenes para hacerlas grandes</p>
+        
+        <div class="timeline-container">
+            <!-- SVG del corazón -->
+            <svg class="heart-timeline" viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg">
+                <path class="heart-path" d="M 250,400 C 150,350 50,280 50,180 C 50,120 90,80 140,80 C 180,80 220,100 250,140 C 280,100 320,80 360,80 C 410,80 450,120 450,180 C 450,280 350,350 250,400 Z" 
+                      fill="none" 
+                      stroke="url(#heartGradient)" 
+                      stroke-width="3"/>
+                <defs>
+                    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffb3c6;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#d4537a;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            
+            <!-- Puntos de la línea de tiempo en forma de corazón -->
+            <!-- Lado izquierdo superior del corazón -->
+            <div class="timeline-point" data-month="enero-2025" style="left: 28%; top: 15%;">
+                <div class="point-circle"></div>
+                <div class="point-label">Enero 2025</div>
+            </div>
+            
+            <div class="timeline-point" data-month="febrero-2025" style="left: 18%; top: 25%;">
+                <div class="point-circle"></div>
+                <div class="point-label">Febrero 2025</div>
+            </div>
+            
+            <div class="timeline-point" data-month="marzo-2025" style="left: 12%; top: 38%;">
+                <div class="point-circle"></div>
+                <div class="point-label">Marzo 2025</div>
+            </div>
+            
+            <!-- Lado izquierdo medio-bajo -->
+            <div class="timeline-point" data-month="abril-2025" style="left: 14%; top: 55%;">
+                <div class="point-circle"></div>
+                <div class="point-label">Abril 2025</div>
+            </div>
+            
+            <div class="timeline-point" data-month="mayo-2025" style="left: 20%; top: 70%;">
+                <div class="point-circle"></div>
+                <div class="point-label">Mayo 2025</div>
+            </div>
+            
+            <!-- Punta inferior del corazón -->
+            <div class="timeline-point" data-month="febrero-2026" style="left: 50%; top: 92%;">
+                <div class="point-circle special"></div>
+                <div class="point-label">Febrero 2026</div>
+            </div>
+            
+            <!-- Lado derecho bajo-medio -->
+            <div class="timeline-point" data-month="julio-2025" style="left: 70%; top: 82%;">
+                <div class="point-circle"></div>
+                <div class="point-label">Julio 2025</div>
+            </div>
+            
+            <div class="timeline-point" data-month="agosto-2025" style="left: 80%; top: 70%;">
+                <div class="point-circle"></div>
+                <div class="point-label">Agosto 2025</div>
+            </div>
+            
+            <!-- Lado derecho superior -->
+            <div class="timeline-point" data-month="octubre-2025" style="left: 88%; top: 38%;">
+                <div class="point-circle"></div>
+                <div class="point-label">Octubre 2025</div>
+            </div>
+            
+            <div class="timeline-point" data-month="noviembre-2025" style="left: 82%; top: 25%;">
+                <div class="point-circle"></div>
+                <div class="point-label">Noviembre 2025</div>
+            </div>
+            
+            <div class="timeline-point" data-month="diciembre-2025" style="left: 72%; top: 15%;">
+                <div class="point-circle"></div>
+                <div class="point-label">Diciembre 2025</div>
+            </div>
+
+            <div class="timeline-point" data-month="enero-2026" style="left: 50%; top: 20%;">
+                <div class="point-circle"></div>
+                <div class="point-label">Enero 2026</div>
+            </div>
+        </div>
+
+        <div class="envelope-container" id="envelopeContainer">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body"></div>
+                <div class="envelope-letter" id="letter">
+                    <p>Se supone q es un sobre de una carta JSJAK PICALE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de la carta -->
+    <div class="letter-section" id="letterSection">
+        <div class="letter-container">
+            <h2 class="letter-title"><button class="close-letter" id="closeLetter">&times;</button>De mi, para ti.</h2>
+            <div class="letter-content">
+                <p>Hola Naomi, hice de nuevo otra pagina para ti, creo q esta es mejor eh.</p>
+                <p>Es impresionante lo rapido que ha pasado el tiempo, ya un año desde que pasamos nuestro primer san valentin juntos, y tmb un año y un mes desde que empezamos a hablar, han sido los momentos mas felices e increibles de mi vida, la manera en la que siento que conectamos te prometo que se siente increíble, se que te lo he dicho muchísimas veces eso, pero es de verdad, se siente como si tu y yo hubiéramos estado destinados a estar juntos todo este tiempo, este 14 de Febrero es un buen dia para recordarte lo mucho que te amo y lo mucho q estoy dispuesto a hacer por ti, cuando te digo q eres mi vida, me refiero literalmente a eso, de verdad que siempre intento hacer de todo para que tu siempre estes bien y feliz, cuando tu estas bien yo me siento super feliz, en lo que hacia esta pagina, pues estuve literalmente viendo todo nuestro chat desde Enero del año pasado hasta el dia de hoy, 14 Febrero 2026, 6:20 AM, no he dormido eh, y me parece super bonito todo lo que hemos pasado, hecho y construido juntos, en las imágenes q puse, q son super resumidas por cierto, me llegaron muchos recuerdos a cuando empezamos a hablar, aun recuerdo cuando te envie follow hace ya 1 año, y q justo m lo hayas regresado, lo cambio absolutamente todo, como un follow y un mensaje cambio mi vida por completo, y no puedo estar mas agradecido x eso, viendo las capturas vi como poco a poco fuimos creando algo, d como los "tqm" pasaron a "te quiero mucho" a "te amo", o como d llamadas d vez en cuando a llamadas todos los días todo el dia, cuando jugamos roblox x primera vez, o cuando yo era super timido y m daba mucha pena todo t acuerdas? Y es que recuerdo cada momento que compartimos, y los q nunca podre olvidar fueron los días q nos vimos, sobre todo ese domingo q nos perdimos en galerías y luego d ahi comimos mcdonalds en mi casa en mi cuarto mientras jugabas fortnite, ojala nos podamos ver pronto de nuevo, me encanta compartir mi dia a dia contigo, y seguir compartiendo 1000 años juntos, seguir creando recuerdos y seguir viviendo mas momentos y experiencias juntos, no tienes idea de lo mucho que te amo Naomi, aun cada q m hablas siento como mariposas, y eso que ya paso un año eh, haces q todo se sienta mejor, con tan solo escucharte mejoras mi dia al 100%, tengo tantas ganas de seguir contigo, y q en un futuro podamos estar mas tiempo juntos, en vacaciones, o incluso llegar a viajar juntos a algún lugar, gracias por estar siempre conmigo y por estar para mi cuando mas lo necesito, ya sabes que siempre tmb m vas a tener a tu lado, sin importar q decision sea, yo siempre te apoyare en todo y jamás te dejare sola en ningún momento, me encanta cuando también jugamos roblox, o minecraft, o el de los backrooms, m divierto mucho contigo, eres super graciosa, además d ser mi pareja tmb eres mi mejor amiga y siento que eso no todas las parejas lo tienen, que jamás se te olvide lo mucho que te amo y admiro Naomi, eres super increíble en todos los aspectos y cada cosa de ti me impresiona mucho, de verdad soy la persona mas afortunada del mundo, no cambiaria absolutamente nada de ti, te amo de todas las maneras posibles, gracias por este año juntos, por cada momento que pasamos juntos, eres d verdad mi persona favorita, mi mejor amiga, mi todo, nunca jamás dudes lo mucho que siento por ti, gracias por amarme como tu lo haces y por hacerme sentir super super afortunado todos los días, eres sin duda lo mejor que me ha pasado y jamás me cansare de decírtelo, y t juro q me seguire esforzando por ser mejor todos los días, para que tu seas feliz todos los días asi como yo lo soy, y poder darte el mundo porque eso te mereces y muchísimo mas, te amo mi vida, muchísimo.</p>
+    <!-- Agrega todos los párrafos que necesites -->
+    
+        <div class="letter-signature">
+            Con todo mi amor,<br>
+            puki
+        </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal para mostrar fotos -->
+    <div class="modal" id="photoModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <div class="photo-grid" id="photoGrid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
