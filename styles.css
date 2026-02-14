@@ -15,7 +15,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Animación de entrada con blur */
 .entry-animation {
     position: fixed;
     top: 0;
@@ -43,7 +42,6 @@ html {
     }
 }
 
-/* Contenedor de corazones */
 .hearts-container {
     position: fixed;
     top: 0;
@@ -55,7 +53,6 @@ html {
     z-index: 1;
 }
 
-/* Corazón individual */
 .heart {
     position: absolute;
     bottom: -50px;
@@ -87,7 +84,6 @@ html {
     }
 }
 
-/* Pantalla de bienvenida */
 .welcome-screen {
     display: flex;
     flex-direction: column;
@@ -153,7 +149,6 @@ html {
     box-shadow: 0 6px 20px rgba(212, 83, 122, 0.4);
 }
 
-/* Sección de línea de tiempo */
 .timeline-section {
     display: none;
     min-height: 100vh;
@@ -199,7 +194,6 @@ html {
     margin: 0 auto 4rem;
 }
 
-/* SVG del corazón */
 .heart-timeline {
     width: 100%;
     height: 100%;
@@ -212,7 +206,6 @@ html {
     filter: drop-shadow(0 0 8px rgba(212, 83, 122, 0.3));
 }
 
-/* Puntos de la línea de tiempo */
 .timeline-point {
     position: absolute;
     cursor: pointer;
@@ -269,7 +262,6 @@ html {
     border-radius: 10px;
 }
 
-/* Sobre animado */
 .envelope-container {
     margin-top: 4rem;
     perspective: 1000px;
@@ -345,7 +337,6 @@ html {
     opacity: 0;
 }
 
-/* Modal para fotos */
 .modal {
     display: none;
     position: fixed;
@@ -428,7 +419,6 @@ html {
     transform: scale(1.05);
 }
 
-/* Sección de la carta - Efecto íntimo de página completa */
 .letter-section {
     display: none;
     position: fixed;
@@ -458,7 +448,6 @@ html {
     }
 }
 
-/* Ocultar corazones cuando la carta está activa */
 .letter-section.active ~ .hearts-container {
     opacity: 0;
     pointer-events: none;
@@ -514,7 +503,6 @@ html {
     margin-top: 1rem;
 }
 
-/* Firma al final de la carta */
 .letter-signature {
     margin-top: 3rem;
     text-align: right;
@@ -523,7 +511,6 @@ html {
     font-size: 1.2rem;
 }
 
-/* Decoración sutil */
 .letter-container::before {
     content: '❤';
     position: absolute;
@@ -535,7 +522,6 @@ html {
     opacity: 0.3;
 }
 
-/* Imagen expandida en modal */
 .photo-grid img {
     cursor: zoom-in;
 }
@@ -563,7 +549,6 @@ html {
     border-radius: 10px;
 }
 
-/* Cuando solo hay una foto en el modal */
 .photo-grid:has(img:only-child) {
     grid-template-columns: 1fr;
     max-width: 600px;
@@ -574,7 +559,6 @@ html {
     height: 400px;
 }
 
-/* Botón para cerrar la carta */
 .close-letter {
     position: absolute;
     top: 1.5rem;
@@ -597,4 +581,5 @@ html {
 .close-letter:hover {
     background: #ffe8e8;
     transform: rotate(90deg);
+
 }
